@@ -1,0 +1,35 @@
+name: Deploy WP Assets (plugins & themes)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-wp-assets
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Prepare deploy folder
+        run: |
+          mkdir -p public_html/wp-content
+          cp -r public/wp-content/plugins public_html/wp-content/plugins
+          cp -r public/wp-content/themes  public_html/wp-content/themes
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: 147.93.37.156
+          username: ${{ secrets.FTP_RLAV_USERNAME }}
+          password: ${{ secrets.FTP_RLAV_PASSWORD }}
+          protocol: ftp
+          port: 21
+          server-dir: ./domains/rlav.com.br/public_html/
+          local-dir: ./public_html/

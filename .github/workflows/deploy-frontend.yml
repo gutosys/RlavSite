@@ -43,7 +43,8 @@ jobs:
         run: |
           mkdir -p public_html
           cp -r dist/angular-rlav/browser/. public_html/
-          cp -r public/wp-content public_html/wp-content
+          mkdir -p public_html/wp-content
+          cp -r public/wp-content/uploads public_html/wp-content/uploads
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
