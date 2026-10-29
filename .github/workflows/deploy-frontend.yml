@@ -48,8 +48,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 147.93.37.156
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.FTP_RLAV_USERNAME }}
+          password: ${{ secrets.FTP_RLAV_PASSWORD }}
           protocol: ftp
           port: 21
           server-dir: ./
