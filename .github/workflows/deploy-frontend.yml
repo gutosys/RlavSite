@@ -53,4 +53,4 @@ jobs:
           protocol: ftp
           port: 21
           server-dir: ./domains/rlav.com.br/public_html/
-          local-dir: /rlav.com.br/public_html/
+          local-dir: ./public_html/
