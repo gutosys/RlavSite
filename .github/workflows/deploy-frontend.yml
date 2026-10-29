@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.FTP_RLAV_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: ./
-          local-dir: ./public_html/
+          server-dir: ./domains/rlav.com.br/public_html/
+          local-dir: /rlav.com.br/public_html/public_html/
