@@ -42,3 +42,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# WordPress plugins and themes (not used by Angular)
+/public/wp-content/plugins
+/public/wp-content/themes
