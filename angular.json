@@ -28,6 +28,10 @@
               {
                 "glob": "favicon.ico",
                 "input": "public"
+              },
+              {
+                "glob": "favicon.svg",
+                "input": "public"
               }
             ],
             "styles": [

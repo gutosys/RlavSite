@@ -53,7 +53,7 @@ import { AnimatedCounterDirective } from '../../directives/animated-counter.dire
 
         <div class="franqueado-direita" appScrollReveal revealClass="reveal-fade-left">
           <div class="franqueado-img-wrapper">
-            <img src="wp-content/inicial.jpg" alt="RLAV Lavanderia Autônoma">
+            <img src="wp-content/franquia-lavanderia.png" alt="RLAV Lavanderia Autônoma">
             <div class="franqueado-float-card card-top" appScrollReveal revealClass="reveal-zoom" revealDelay="delay-200">
               <i class="fa-solid fa-store"></i>
               <div>
